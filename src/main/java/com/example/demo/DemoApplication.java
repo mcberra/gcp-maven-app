@@ -20,5 +20,8 @@
                   return String.format("Hello %s!", name);
                   }
                 
+                  @GetMapping("/error")
+                  public String hello(@RequestParam(value = "name", defaultValue = "type /hello to access to the application content") String name) {
+                  return String.format("Please %s!", name);
               }
             
